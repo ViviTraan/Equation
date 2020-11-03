@@ -11,35 +11,21 @@ namespace Equation
 	{
 		static void Main(string[] args)
 		{
-			int num1 = 0; int num2 = 0; int num3 = 0;
+			Console.WriteLine("Skriv in första operatorn");
+			string op = Console.ReadLine();
+			Console.WriteLine("Skriv in andra operatorn");
+			string op2 = Console.ReadLine();
+
 			Console.WriteLine("Skriv in första numret, tryck sedan Enter");
-			num1 = Convert.ToInt32(Console.ReadLine());
+			int num1 = Convert.ToInt32(Console.ReadLine());
 
 			Console.WriteLine("Skriv in andra numret, tryck sedan Enter");
-			num2 = Convert.ToInt32(Console.ReadLine());
+			int num2 = Convert.ToInt32(Console.ReadLine());
 
-			Console.WriteLine("Välj din första operator:");
-			Console.WriteLine("\ta - Addition");
-			Console.WriteLine("\ts - Subtraktion");
-			Console.WriteLine("\tm - Multiplikation");
-			Console.WriteLine("\td - Division");
-			Console.Write("Ditt val?"); 
+			Console.WriteLine("Skriv in tredje numret, tryck sedan Enter");
+			int num3 = Convert.ToInt32(Console.ReadLine());
 
-			switch (Console.ReadLine())
-			{
-				case "a":
-					Console.WriteLine($"Resultatet: {num1} + {num2}  = " + (num1 + num2));
-					break;
-				case "s":
-					Console.WriteLine($"Resultatet: {num1} - {num2}  = " + (num1 - num2));
-					break;
-				case "m":
-					Console.WriteLine($"Resultatet: {num1} * {num2}  = " + (num1 * num2));
-					break;
-				case "d":
-					Console.WriteLine($"Resultatet: {num1} / {num2}  = " + (num1 / num2));
-					break;
-			}
+			double sum = num1 + op + num2 + op2 + num3;
 
 		
 		}
