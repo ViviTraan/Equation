@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: Equation, Configuration: Debug Any CPU ------
+1>  Equation -> C:\Users\misst\source\repos\Equation\Equation\bin\Debug\Equation.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

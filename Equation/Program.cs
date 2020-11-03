@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace Equation
 {
@@ -11,9 +12,10 @@ namespace Equation
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Skriv in första operatorn");
+			Console.WriteLine("Skriv in första operatorn : + - * / ");
 			string op = Console.ReadLine();
-			Console.WriteLine("Skriv in andra operatorn");
+
+			Console.WriteLine("Skriv in andra operatorn : + - * / ");
 			string op2 = Console.ReadLine();
 
 			Console.WriteLine("Skriv in första numret, tryck sedan Enter");
@@ -25,9 +27,103 @@ namespace Equation
 			Console.WriteLine("Skriv in tredje numret, tryck sedan Enter");
 			int num3 = Convert.ToInt32(Console.ReadLine());
 
-			double sum = num1 + op + num2 + op2 + num3;
+			double sum = 0;
 
-		
+			if (op == "+")
+			{
+				if (op2 == "+")
+				{
+					sum = num1 + num2 + num3;
+				}
+
+				else if (op2 == "-")
+				{
+					sum = num1 + num2 - num3;
+				}
+
+				else if (op2 == "*")
+				{
+					sum = num1 + num2 * num3;
+				}
+
+				else if (op2 == "/")
+				{
+					sum = num1 + num2 / num3;
+				}
+			}
+
+			if (op == "-")
+			{
+				if (op2 == "+")
+				{
+					sum = num1 - num2 + num3;
+				}
+
+				else if (op2 == "-")
+				{
+					sum = num1 - num2 - num3;
+				}
+
+				else if (op2 == "*")
+				{
+					sum = num1 - num2 * num3;
+				}
+
+				else if (op2 == "/")
+				{
+					sum = num1 - num2 / num3;
+				}
+			}
+
+			if (op == "*")
+			{
+				if (op2 == "+")
+				{
+					sum = num1 * num2 + num3;
+				}
+
+				else if (op2 == "-")
+				{
+					sum = num1 * num2 - num3;
+				}
+
+				else if (op2 == "*")
+				{
+					sum = num1 * num2 * num3;
+				}
+
+				else if (op2 == "/")
+				{
+					sum = num1 * num2 / num3;
+				}
+			}
+
+			if (op == "/")
+			{
+				if (op2 == "+")
+				{
+					sum = num1 / num2 + num3;
+				}
+
+				else if (op2 == "-")
+				{
+					sum = num1 / num2 - num3;
+				}
+
+				else if (op2 == "*")
+				{
+					sum = num1 / num2 * num3;
+				}
+
+				else if (op2 == "/")
+				{
+					sum = num1 / num2 / num3;
+				}
+			}
+
+			Console.WriteLine(num1 + op + num2 + op2 + num3 + "=" + sum);
+			
+
 		}
 	}
 }
