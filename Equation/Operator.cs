@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace Equation
 		public static double sum (string op, string op2, int num1, int num2, int num3)
 		{
 			double total = 0;
+
 			if (op == "+")
 			{
 				if (op2 == "+")
@@ -105,7 +107,6 @@ namespace Equation
 
 			return total;
 		}
-
 		
 	}
 }

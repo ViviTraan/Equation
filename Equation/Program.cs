@@ -30,7 +30,6 @@ namespace Equation
 			double total = Operator.sum(op,op2,num1,num2,num3);
 
 			Console.WriteLine(num1 + op + num2 + op2 + num3 + "=" + total);
-			
 
 		}
 	}
